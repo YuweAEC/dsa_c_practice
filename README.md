@@ -2,6 +2,6 @@
 
  - Title
  - Introduction
- -
- -
+ - Authors
+ - Acknowledgements
 
