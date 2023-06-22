@@ -1,0 +1,1 @@
+A STACK is a linear data structure in which the element added last is used first.
