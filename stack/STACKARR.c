@@ -24,7 +24,7 @@ void pop()
 	{
 		printf("The Stack is Empty. Can't pop");
 	}
-	
+
 	else
 	{
 		printf("The popped element is %d",a[top]);
@@ -39,6 +39,7 @@ void show()
 	{
 		printf("Empty Stack. Nothing to display");
 	}
+	
 	else
 	{
 		printf("The elements of the Stack are ");
