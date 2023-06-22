@@ -1,2 +1,5 @@
 A STACK is a linear data structure in which the element added last is used first. Hence it is called LIFO(Last In First Out) data structure. 
 Index of the last inserted element is called TOP of the stack.
+
+Insertion of an element in a stack is called PUSH. Whenever an element is PUSHed, value of TOP increases by 1.
+If TOP=(Size of Array-1), then it is told that the stack is FULL.
