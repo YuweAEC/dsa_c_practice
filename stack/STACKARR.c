@@ -29,6 +29,7 @@ void pop()
 		top--;
 	}
 }
+
 void show()
 {
 	int i;
