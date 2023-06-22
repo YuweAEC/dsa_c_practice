@@ -16,6 +16,7 @@ void push(int x)
 		a[top]=x;
 	}
 }
+
 void pop()
 {
 	if(top==-1)
