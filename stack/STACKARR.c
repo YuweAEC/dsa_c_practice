@@ -3,6 +3,7 @@
 #define MAX 5
 
 int a[MAX],top;//Global Variable
+
 void push(int x)
 {
 	if(top==MAX-1)
