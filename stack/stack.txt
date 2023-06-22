@@ -1,1 +1,2 @@
-A STACK is a linear data structure in which the element added last is used first.
+A STACK is a linear data structure in which the element added last is used first. Hence it is called LIFO(Last In First Out) data structure. 
+Index of the last inserted element is called TOP of the stack.
