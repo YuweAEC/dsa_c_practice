@@ -44,6 +44,7 @@ void show()
 			printf("%d ",a[i]);
 	}
 }
+
 void menu()
 {
 	printf("\n");
