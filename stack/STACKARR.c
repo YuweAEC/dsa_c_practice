@@ -10,6 +10,7 @@ void push(int x)
 	{
 		printf("Stack is Full. Can't Push\n");
 	}
+
 	else
 	{
 		top++;
@@ -23,6 +24,7 @@ void pop()
 	{
 		printf("The Stack is Empty. Can't pop");
 	}
+	
 	else
 	{
 		printf("The popped element is %d",a[top]);
