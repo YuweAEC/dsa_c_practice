@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 5
+
 int a[MAX],top;//Global Variable
 void push(int x)
 {
