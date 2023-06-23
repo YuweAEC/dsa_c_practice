@@ -1,37 +1,31 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 5
-
 int a[MAX],top;//Global Variable
-
 void push(int x)
 {
 	if(top==MAX-1)
 	{
 		printf("Stack is Full. Can't Push\n");
 	}
-
 	else
 	{
 		top++;
 		a[top]=x;
 	}
 }
-
 void pop()
 {
 	if(top==-1)
 	{
 		printf("The Stack is Empty. Can't pop");
 	}
-
 	else
 	{
 		printf("The popped element is %d",a[top]);
 		top--;
 	}
 }
-
 void show()
 {
 	int i;
@@ -39,7 +33,6 @@ void show()
 	{
 		printf("Empty Stack. Nothing to display");
 	}
-	
 	else
 	{
 		printf("The elements of the Stack are ");
@@ -47,7 +40,6 @@ void show()
 			printf("%d ",a[i]);
 	}
 }
-
 void menu()
 {
 	printf("\n");
@@ -58,7 +50,6 @@ void menu()
 	printf("\t\t\t   4. EXIT\n");
 	printf("Enter your choice ");
 }
-
 int main()
 {
 	int ch,m;
