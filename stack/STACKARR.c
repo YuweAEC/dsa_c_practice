@@ -67,6 +67,7 @@ int main()
 	{
 		menu();
 		scanf("%d",&ch);//Accept choice
+		
 		switch(ch)
 		{
 			case 1:
@@ -82,6 +83,7 @@ int main()
 				break;
 			case 4:
 				exit(0);//Exit from the program
+			
 			default:
 				printf("\nInvalid choice \n");
 				break;
