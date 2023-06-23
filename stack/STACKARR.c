@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 5
+
 int a[MAX],top;//Global Variable
+
 void push(int x)
 {
 	if(top==MAX-1)
@@ -14,6 +16,7 @@ void push(int x)
 		a[top]=x;
 	}
 }
+
 void pop()
 {
 	if(top==-1)
@@ -26,6 +29,7 @@ void pop()
 		top--;
 	}
 }
+
 void show()
 {
 	int i;
@@ -40,6 +44,7 @@ void show()
 			printf("%d ",a[i]);
 	}
 }
+
 void menu()
 {
 	printf("\n");
