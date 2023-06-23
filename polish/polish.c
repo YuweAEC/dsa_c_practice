@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<math.h>
 #define MAX 50
+
 int top;
 char infix[MAX], postfix[MAX], stack[MAX];
 void push(char);
@@ -10,6 +11,7 @@ char pop();
 int precedence(char);//Returns priority of an operator
 void convert();
 int evaluate();
+
 int main()
 {
 	top=-1;
@@ -21,10 +23,12 @@ int main()
 	printf("\nThe result is %d", evaluate() );
 	return 0;
 }
+
 void convert()
 {
 	int p=0,pre,i,len,p1,p2;
 	char n;
+
 	for(i=0;infix[i]!='\0';i++)
 	{
 		switch(infix[i])
@@ -54,6 +58,7 @@ void convert()
 						push(infix[i]);
 						break;
 					}
+
 					else
 					{
 						p1=precedence(infix[i]);//Precedence of current operator
@@ -63,6 +68,7 @@ void convert()
 							push(infix[i]);
 							break;
 						}
+
 						else
 						{
 							postfix[p]=pop();
@@ -71,16 +77,19 @@ void convert()
 					}
 				}//End of the infinite loop
 				break;
+
 			default://When the character is an operand
 				postfix[p]=infix[i];
 				p++;
 				//break;
 		}	//End of switch
 	}	//End of for loop
+
 	while(top!=-1)
 		postfix[p++]=pop();
 	postfix[p]='\0';
 }
+
 void push(char s)
 {
 	top++;
@@ -92,6 +101,7 @@ char pop()
 	char a;
 	if(top==-1)
 		printf("Stack underflow");
+
 	else
 	{
 		a=stack[top];
@@ -99,6 +109,7 @@ char pop()
 		return a;
 	}
 }
+
 int precedence(char s)
 {
 	switch(s)
@@ -113,14 +124,17 @@ int precedence(char s)
 			return 3;
 	}
 }
+
 int evaluate ()
 {
 	int i,a,b,temp,result;
+
 	for(i=0;postfix[i]!='\0';i++)
 	{
 		if(postfix[i]<='9' && postfix[i]>='0')
 			push(postfix[i]-48);
-		else
+		
+        else
 		{
 			a=pop();
 			b=pop();
@@ -144,7 +158,10 @@ int evaluate ()
 			}	//End of switch
 			push(temp);
 		}	//End of else
-	}	//End of for
-	result=pop();
+	}	//End of for 
+	
+    result=pop();
+
 	return result;
 }
+
