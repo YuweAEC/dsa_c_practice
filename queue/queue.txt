@@ -8,3 +8,5 @@ When the queue is empty both front andd rear will be -1.
 Addition :
 At the first time addition,rear increases by 1 but front remians the same. when the first element is added both front and rear increase b1 . when the rear = size-1, the queue is full
 
+Deletion:
+at the end time of deletion, front increases by 1 but remains the same . after repeated deletion,at a certain point of time front and rear will be same. it means that the queue contains onl onne element. if that element is also deleted ,then both front and rear will be -1. 
