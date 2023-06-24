@@ -10,8 +10,10 @@ void add(int x)
         printf("THE QUEUE IS FULL");
         return ;
     }
+
     if(f==-1)
         f=r=0;
+    
     else
         r++;
     a[r]=x;
@@ -24,9 +26,12 @@ void deletion()
         printf("Q is EMpty, Can't delete");
         return ;
     }
+    
     printf("the deleted element is %d", a[f]);
+    
     if(f==r)
         f=f=-1;
+    
     else
         f++;
 }
