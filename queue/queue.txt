@@ -5,3 +5,6 @@ Index of last entereda alement is called rear.
 
 When the queue is empty both front andd rear will be -1.
 
+Addition :
+At the first time addition,rear increases by 1 but front remians the same. when the first element is added both front and rear increase b1 . when the rear = size-1, the queue is full
+
