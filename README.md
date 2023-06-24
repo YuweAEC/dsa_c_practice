@@ -5,9 +5,9 @@
  - Authors
  - Acknowledgements
 
-## Tile
+## Title
  
- 
+All DSA(Data Structure and ALgorithms) Practice sets on mine learning.
 
 ## Introduction
 
