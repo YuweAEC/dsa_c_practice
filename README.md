@@ -19,6 +19,8 @@ Follow the following wa to connect through repo :-
 >> 1. stack.txt
 >> 2. push-pop.c
 >> 3. STACKARR.c
+>>>polish
+>> 1. polish.c
 >>>
 
 ## Authors
