@@ -1,4 +1,4 @@
-# DSA :- Starting
+# DSA using C :- Starting
 
  - Title
  - Introduction
