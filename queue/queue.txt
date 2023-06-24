@@ -1,6 +1,6 @@
-addition will take place at the rear end and deletion will take place from hte front end.
+Addition will take place at the rear end and deletion will take place from hte front end.
 
-index of first entereda alement is called front.
-index of last entereda alement is called rear.
+Index of first entereda alement is called front.
+Index of last entereda alement is called rear.
 
-when the queue is empty both front andd rear will be -1.
+When the queue is empty both front andd rear will be -1.
