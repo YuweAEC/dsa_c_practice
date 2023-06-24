@@ -15,13 +15,13 @@ DSA - Data Structures and Algorithms
 
 Follow the following wa to connect through repo :- 
 >List of files and folders -
->>>stack
+>>>*stack*
 >> 1. stack.txt
 >> 2. push-pop.c
 >> 3. STACKARR.c
->>>polish
+>>>*polish*
 >> 1. polish.c
->>>queue
+>>>*queue*
 >> 1. queue.txt
 >>>
 
