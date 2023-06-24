@@ -4,3 +4,4 @@ Index of first entereda alement is called front.
 Index of last entereda alement is called rear.
 
 When the queue is empty both front andd rear will be -1.
+
