@@ -11,9 +11,9 @@ void add(int x)
         return ;
     }
     if(f==-1)
-    f=r=0;
+        f=r=0;
     else
-    r++;
+        r++;
     a[r]=x;
 }
 
@@ -26,7 +26,7 @@ void deletion()
     }
     printf("the deleted element is %d", a[f]);
     if(f==r)
-    f=f=-1;
+        f=f=-1;
     else
-    f++;
+        f++;
 }
