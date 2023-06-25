@@ -165,4 +165,3 @@ int evaluate ()
 	return result;
 }
 
- 
