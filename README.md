@@ -20,7 +20,7 @@ Follow the following wa to connect through repo :-
 >> 2. *push-pop.c*
 >> 3. *STACKARR.c*
 >>>polish notation
->> 1. polish.c
+>> 1. *polish.c*
 >>>queue
 >> 1. *queue.txt*
 >>>
