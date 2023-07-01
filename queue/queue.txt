@@ -1,13 +1,13 @@
 Addition will take place at the rear end and deletion will take place from hte front end.
 
-Index of first entereda alement is called front.
-Index of last entereda alement is called rear.
+Index of first entered elememt is called front.
+Index of last entered element is called rear.
 
-When the queue is empty both front andd rear will be -1.
+When the queue is empty both front and rear will be -1.
 
 Addition :
-At the first time addition,rear increases by 1 but front remians the same. When the first element is added both front and rear increase b1 . When the rear = size-1, the queue is full.
+At the first time addition,rear increases by 1 but front remains the same. When the first element is added both front and rear increase by 1 . When the rear = size-1, the queue is full.
 
 Deletion:
-At the end time of deletion, front increases by 1 but remains the same. After repeated deletion, at a certain point of time front and rear will be same. It means that the queue contains onl one element. If that element is also deleted, then both front and rear will be -1.
+At the end time of deletion, front increases by 1 but rear remains the same. After repeated deletion, at a certain point of time front and rear will be same. It means that the queue contains only one element. If that element is also deleted, then both front and rear will be -1.
 
