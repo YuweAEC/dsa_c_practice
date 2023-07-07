@@ -11,7 +11,8 @@ All DSA(Data Structure and ALgorithms) Practice sets on mine learning.
 
 ## Introduction
 
-DSA - Data Structures and Algorithms
+**Data structures and algorithms (DSA)** are an important aspect of any *programming language*. 
+Every language has its own *data structures* and its way of handling different types of *algorithms*.
 
 Follow the following wa to connect through repo :- 
 >List of files and folders -
