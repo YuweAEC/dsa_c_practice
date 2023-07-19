@@ -3,13 +3,14 @@
 #define ms 5
 
 void push();
+int s[5], t=-1;
 
 void main()
 {
-    int op, it, v;
+    int op, it;
     while (100) //Use an infinite loop to continuously read user input
     {
-        printf("\n 1-PUSH 2-POP 3-EXIT \n Enter the option");
+        printf("\n 1-PUSH 2-EXIT \n Enter the option");
         scanf("%d", &op);
         switch (op)
         {
