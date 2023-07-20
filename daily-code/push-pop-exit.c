@@ -17,24 +17,27 @@ void display()    // defining the display function used in push and pop
 void main()
 {
     int op, it, v;
-    printf("\n 1-PUSH 2-POP 3-EXIT \n Enter the option");
-    scanf("%d", &op);
-    switch (op)
+    while (100) //Use an infinite loop to continuously read user input
     {
-    case 1:     /* constant-expression */
-        printf("Enter the item to push:");
-        scanf("%d,", &it);
-        push(it);   /* invoke or calling the push function */
-        break;
-    case 2:
-        v=pop();   /* invoke or calling the pop function */
-        if (v>0)
+        printf("\n 1-PUSH 2-POP 3-EXIT \n Enter the option");
+        scanf("%d", &op);
+        switch (op)
         {
-            printf(" %d is pop from the stack", v);
+        case 1:     /* constant-expression */
+            printf("Enter the item to push:");
+            scanf("%d,", &it);
+            push(it);   /* invoke or calling the push function */
+            break;
+        case 2:
+            v=pop();   /* invoke or calling the pop function */
+            if (v>0)
+            {
+                printf(" %d is pop from the stack", v);
+            }
+            break;
+        case 3:
+            exit(0);
         }
-        break;
-    case 3:
-        exit(0);
     }
 }
 

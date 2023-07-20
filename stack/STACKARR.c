@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #define MAX 5
 
+//program to add delete and display the element of array in stack
+
 int a[MAX],top;//Global Variable
 
 void push(int x)
