@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#define ms 4
+#define max 4
 
 void push();
 int pop();
-int s[5], t=-1;
+int stackArr[5], top=-1;
 
 void display()    // defining the display function used in push and pop
 {
     printf("\n Stack Contains \n");
-    for(int i=t; i>=0; i--)
-    printf("%d \n", s[i]);
+    for(int i=top; i>=0; i--)
+    printf("%d \n", stackArr[i]);
 }
 
 void main()
@@ -43,28 +43,28 @@ void main()
 
 void push(int x)    // push function defination
 {
-    if (t==ms)
+    if (top==max)
     {
         printf("\n overflow");
     }
     else
     {
-        t=t+1;
-        s[t]=x;    //assigning item on the top of the stack
+        top=top+1;
+        stackArr[top]=x;    //assigning item on the top of the stack
     }
     display();
 }
 
 int pop()     // pop function defination
 {
-    if (t<0)
+    if (top<0)
     {
         printf("\n Underflow");
     }
     else
     {
-        int v=s[t];     //assiging value to pop form the stack
-        t=t-1;      //decrease top by 1
+        int v=stackArr[top];     //assiging value to pop form the stack
+        top=top-1;      //decrease top by 1
         display();
         return v;    
     }
