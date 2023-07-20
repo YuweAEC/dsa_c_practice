@@ -8,7 +8,7 @@ int stackArr[5], top=-1;
 void display()    // defining the display function used in push and pop
 {
     printf("\n List of the items in Stack \n");
-    for(int i=t; i>=0; i--)
+    for(int i=top; i>=0; i--)
     printf("%d \n", sstackArr[i]);
 }
 
@@ -34,7 +34,7 @@ void main()
 
 void push(int x)    // push function defination
 {
-    if (t==max)
+    if (top==max)
     {
         printf("\n overflow");
     }
