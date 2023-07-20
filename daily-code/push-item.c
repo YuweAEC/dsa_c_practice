@@ -9,7 +9,7 @@ void display()    // defining the display function used in push and pop
 {
     printf("\n List of the items in Stack \n");
     for(int i=top; i>=0; i--)
-    printf("%d \n", sstackArr[i]);
+    printf("%d \n", stackArr[i]);
 }
 
 void main()
