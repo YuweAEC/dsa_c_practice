@@ -1,9 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define ms 5
+#define max 5
 
 void push();
-int s[5], t=-1;
+int stackArr[5], top=-1;
+
+void display()    // defining the display function used in push and pop
+{
+    printf("\n Stack Contains \n");
+    for(int i=t; i>=0; i--)
+    printf("%d \n", sstackArr[i]);
+}
 
 void main()
 {
@@ -27,13 +34,14 @@ void main()
 
 void push(int x)    // push function defination
 {
-    if (t==ms)
+    if (t==max)
     {
         printf("\n overflow");
     }
     else
     {
-        t=t+1;
-        s[t]=x;    //assigning item on the top of the stack
+        top=top+1;
+        stackArr[top]=x;    //assigning item on the top of the stack
     }
+    display();
 }
