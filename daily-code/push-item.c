@@ -2,6 +2,7 @@
 #include<stdlib.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define max 5
 
 void push();
@@ -23,6 +24,8 @@ void main()
 =======
 =======
 >>>>>>> 4d282bf (feat: add push to push an item to stack)
+=======
+>>>>>>> 4d282bf (feat: add push to push an item to stack)
 #define ms 5
 
 void push();
@@ -34,6 +37,9 @@ void main()
     {
         printf("\n 1-PUSH 2-POP 3-EXIT \n Enter the option");
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4d282bf (feat: add push to push an item to stack)
+=======
 >>>>>>> 4d282bf (feat: add push to push an item to stack)
 =======
 >>>>>>> 4d282bf (feat: add push to push an item to stack)
@@ -55,7 +61,11 @@ void push(int x)    // push function defination
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (top==max)
+=======
+    if (t==ms)
+>>>>>>> 4d282bf (feat: add push to push an item to stack)
 =======
     if (t==ms)
 >>>>>>> 4d282bf (feat: add push to push an item to stack)
@@ -69,10 +79,16 @@ void push(int x)    // push function defination
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         top=top+1;
         stackArr[top]=x;    //assigning item on the top of the stack
     }
     display();
+=======
+        t=t+1;
+        s[t]=x;    //assigning item on the top of the stack
+    }
+>>>>>>> 4d282bf (feat: add push to push an item to stack)
 =======
         t=t+1;
         s[t]=x;    //assigning item on the top of the stack
