@@ -7,7 +7,7 @@ int stackArr[5], top=-1;
 
 void display()    // defining the display function used in push and pop
 {
-    printf("\n Stack Contains \n");
+    printf("\n List of the items in Stack \n");
     for(int i=t; i>=0; i--)
     printf("%d \n", sstackArr[i]);
 }
@@ -17,7 +17,7 @@ void main()
     int op, it;
     while (100) //Use an infinite loop to continuously read user input
     {
-        printf("\n 1-PUSH 2-EXIT \n Enter the option");
+        printf("\n 1-PUSH 2-EXIT \n Enter the option \n\t");
         scanf("%d", &op);
         switch (op)
         {
