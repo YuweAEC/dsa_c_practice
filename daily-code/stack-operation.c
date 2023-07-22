@@ -26,7 +26,7 @@ void main()
             v=pop();   /* invoke or calling the pop function */
             if (v>0)
             {
-                printf("\n%d is pop from the stack", v);
+                printf("\n%d is popped from the stack", v);
             }
             break;
         case 3:
