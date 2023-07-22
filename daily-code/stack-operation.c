@@ -11,7 +11,7 @@ int stackArr[5], top=-1;
 void main()
 {
     int op, it, v;
-    while (100) //Use an infinite loop to continuously read user input
+    while (true) //Use an infinite loop to continuously read user input
     {
         printf("\n 1-PUSH \n 2-POP \n 3-Veiw-stack \n 4-EXIT \n Enter the option: ");
         scanf("%d", &op);
