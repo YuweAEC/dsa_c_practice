@@ -68,4 +68,3 @@ int pop()     // pop function defination
         return v;    
     }
 }
- 
