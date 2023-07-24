@@ -5,7 +5,7 @@ void add(int x);
 void deletion();
 int a[MAX],front,rare;
 
-void add(int x)
+void add(int x) //for adding element in queue
 {
 	if(rare==MAX-1)
 	{
@@ -19,7 +19,7 @@ void add(int x)
 	a[rare]=x;
 }
 	
-void deletion()
+void deletion() //for deleting element from queue
 {
 	if(front==-1)
 	{
@@ -32,3 +32,4 @@ void deletion()
 	else
 		front++;
 }
+
