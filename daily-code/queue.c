@@ -1,18 +1,18 @@
 #include<stdio.h>
-#define MAX 5 
+#define MAX 5 //size of the queue
 
 void add(int x);
 void deletion(); 
-int a[MAX],front,rare; 
+int a[MAX],front,rare;  //global declaration of queue
 
 void add(int x) 
 {
-	if(rare==MAX-1) 		
+	if(rare==MAX-1) //check if queue is full 		
 	{
 		printf("THE QUEUE IS FULL");
 		return;
 	}
-	if(front==-1)
+	if(front==-1) //check if queue is empty
 		front=rare=0; 
 	else  
 		rare++;
@@ -21,13 +21,13 @@ void add(int x)
 	
 void deletion() 
 {
-	if(front==-1)
+	if(front==-1) //check if queue is empty
 	{
 		printf("Q is Empty, Can't delete");
 		return;
 	}
-	printf("the deleted element is %d",a[front]); 
-	if(front==rare)
+	printf("the deleted element is %d",a[front]);  
+	if(front==rare)   //	check if only one element is present in queue
 		front=rare=-1; 
 	else
 		front++;
@@ -35,8 +35,8 @@ void deletion()
 
 void main()	
 {
-	int ch,x;
-	front=rare=-1; 
+	int ch,x;  //ch is choice
+	front=rare=-1;  //initially queue is empty
 	do
 	{
 		printf("\n1. Add\n2. Delete\n3. List\n4. Exit\nEnter your choice: ");
@@ -45,9 +45,9 @@ void main()
 		{
 			case 1: printf("Enter the element to be added: "); 		
 					scanf("%d",&x);
-					add(x); 
+					add(x); //call add function
 					break;
-			case 2: deletion(); 
+			case 2: deletion();  //call delete function
 					break;
 			case 3: for(int i=front;i<=rare;i++)  	
 					{
@@ -56,5 +56,5 @@ void main()
 			case 4: break;
 			default: printf("Invalid choice")
 		}
-	}while(ch!=3); 
+	}while(ch!=3); //end of do while loop and end of program (exit)
 }
