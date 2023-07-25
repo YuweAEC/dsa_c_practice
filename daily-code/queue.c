@@ -49,12 +49,12 @@ void main()
 					break;
 			case 2: deletion();  //call delete function
 					break;
-			case 3: for(int i=front;i<=rare;i++)  	
+			case 3: for(int i=front;i<=rare;i++)  	//display the queue
 					{
 						printf("%d\t",a[i]); 
 					}
 			case 4: break;
-			default: printf("Invalid choice")
+			default: printf("Invalid choice");
 		}
 	}while(ch!=3); //end of do while loop and end of program (exit)
 }
