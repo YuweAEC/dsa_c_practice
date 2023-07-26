@@ -13,9 +13,9 @@ void add(int storeElement)
 		return;
 	}
 	if(front==-1) //check if queue is empty
-		front=rear=0; 
-	else  
-		rear++;
+		front=rear=0; //if empty then make front and rear as 0
+	else 
+		rear++; //if not empty then increment rear
 	queue[rear]=storeElement;
 }
 	
@@ -28,9 +28,9 @@ void delete()
 	}
 	printf("the deleted element is %d",queue[front]);  
 	if(front==rear)   //	check if only one element is present in queue
-		front=rear=-1; 
+		front=rear=-1; 	//if yes then make front and rear as -1
 	else
-		front++;
+		front++; //if no then increment front
 }
 
 void main()	
@@ -42,7 +42,7 @@ void main()
 		printf("\n1. Add\n2. Delete\n3. List\n4. Exit\nEnter your choice: ");
 		scanf("%d",&choice);
 		switch(choice)
-		
+		{
 			case 1: printf("Enter the element you want to add:  "); 		
 					scanf("%d",&storeElement); //read the element to be added
 					add(storeElement); //call add function
