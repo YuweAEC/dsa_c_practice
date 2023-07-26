@@ -2,7 +2,7 @@
 #define MAX 5 //size of the queue
 
 void add(int x);
-void deletion(); 
+void delete(); 
 int queue[MAX],front,rear;  //global declaration of queue
 
 void add(int x) 
@@ -19,7 +19,7 @@ void add(int x)
 	queue[rear]=x;
 }
 	
-void deletion() 
+void delete() 
 {
 	if(front==-1) //check if queue is empty
 	{
@@ -35,19 +35,19 @@ void deletion()
 
 void main()	
 {
-	int ch,x;  //ch is choice
+	int choice,x;  //choice is choice
 	front=rear=-1;  //initially queue is empty
 	do
 	{
 		printf("\n1. Add\n2. Delete\n3. List\n4. Exit\nEnter your choice: ");
-		scanf("%d",&ch);
-		switch(ch)
+		scanf("%d",&choice);
+		switch(choice)
 		{
 			case 1: printf("Enter the element to be added: "); 		
 					scanf("%d",&x);
 					add(x); //call add function
 					break;
-			case 2: deletion();  //call delete function
+			case 2: delete();  //call delete function
 					break;
 			case 3: for(int i=front;i<=rear;i++)  	//display the queue
 					{
@@ -56,5 +56,5 @@ void main()
 			case 4: break;
 			default: printf("Invalid choice");
 		}
-	}while(ch!=3); //end of do while loop and end of program (exit)
+	}while(choice!=3); //end of do while loop and end of program (exit)
 }
