@@ -1,11 +1,11 @@
 #include<stdio.h>
 #define MAX 5 //size of the queue
 
-void add(int x);
+void add(int storeElement);
 void delete(); 
 int queue[MAX],front,rear;  //global declaration of queue
 
-void add(int x) 
+void add(int storeElement) 
 {
 	if(rear==MAX-1) //check if queue is full 		
 	{
@@ -16,7 +16,7 @@ void add(int x)
 		front=rear=0; 
 	else  
 		rear++;
-	queue[rear]=x;
+	queue[rear]=storeElement;
 }
 	
 void delete() 
@@ -35,17 +35,17 @@ void delete()
 
 void main()	
 {
-	int choice,x;  //choice is choice
+	int choice,storeElement;  //choice is choice
 	front=rear=-1;  //initially queue is empty
 	do
 	{
 		printf("\n1. Add\n2. Delete\n3. List\n4. Exit\nEnter your choice: ");
 		scanf("%d",&choice);
 		switch(choice)
-		{
-			case 1: printf("Enter the element to be added: "); 		
-					scanf("%d",&x);
-					add(x); //call add function
+		
+			case 1: printf("Enter the element you want to add:  "); 		
+					scanf("%d",&storeElement); //read the element to be added
+					add(storeElement); //call add function
 					break;
 			case 2: delete();  //call delete function
 					break;
