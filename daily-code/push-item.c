@@ -13,7 +13,7 @@ void main()
         scanf("%d", &op);
         switch (op)
         {
-        case 1:     /* constant-expression */
+        case 1:                            /* constant-expression */
             printf("Enter the item to push:");
             scanf("%d,", &it);
             push(it);   /* invoke or calling the push function */
