@@ -4,10 +4,10 @@
 
 
 // Define the node structure
-typedef struct Node // Declaration of structure that defines list entries 
+typedef struct node // Declaration of structure that defines list entries 
 {
     int n;
-    struct Node* next; // Pointer to the next node (list entry)
+    struct node* next; // Pointer to the next node (list entry)
 } node;
 
 void create()
@@ -18,7 +18,7 @@ void create()
     do
     {
         printf("Enter the value: ");
-        scanf("%d", &x);
+        scanf("\n%d", &x);
         t=(node*)malloc(sizeof(node));
         t->n=x;
         t->next=NULL;
@@ -36,5 +36,27 @@ void create()
         getchar();
         a=getchar();
     } while (a=='y' || a=='Y');
-    display(head);
+    display(head); // Call the display function to display the list elements 
+}
+
+void display(node* head)
+{
+    if(head==NULL)
+    {
+        printf("List is empty\n");
+        return;
+    }
+    printf("The elements are: ");
+    while(head!=NULL)
+    {
+        printf("%d", head->n);
+        head=head->next;
+    }
+    printf("\n");
+}
+
+int main()
+{
+    create();
+    return 0;
 }
