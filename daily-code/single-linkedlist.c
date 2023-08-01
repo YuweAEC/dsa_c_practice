@@ -2,11 +2,19 @@
 #include<stdlib.h>
 #include<conio.h>
 
+
+// Define the node structure
+typedef struct Node // Declaration of structure that defines list entries 
+{
+    int n;
+    struct Node* next; // Pointer to the next node (list entry)
+} node;
+
 void create()
 {
     int x;
     char a;
-    node *t, *h;
+    node *t, *h, *head=NULL;
     do
     {
         printf("Enter the value: ");
@@ -25,7 +33,8 @@ void create()
             h=t;
         }
         printf("Do you want to continue? (y/n): ");
+        getchar();
         a=getchar();
     } while (a=='y' || a=='Y');
-    
+    display(head);
 }
