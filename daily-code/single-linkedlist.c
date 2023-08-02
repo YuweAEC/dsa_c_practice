@@ -24,7 +24,7 @@ void create()
         t->next=NULL;
         if (head==NULL)
         {
-            head=t;
+            head=t; 
             h=t;
         }
         else
@@ -39,8 +39,21 @@ void create()
     display(head); // Call the display function to display the list elements 
 }
 
-void display(node* head)
+int count()
 {
+    int c=0;
+    node* head=NULL;
+    while(head!=NULL)
+    {
+        c++;
+        head=head->next;
+    }
+    return c;
+}
+
+void display()
+{
+    node *head;
     if(head==NULL)
     {
         printf("List is empty\n");
@@ -49,7 +62,7 @@ void display(node* head)
     printf("The elements are: ");
     while(head!=NULL)
     {
-        printf("%d", head->n);
+        printf("%5d", head->n);
         head=head->next;
     }
     printf("\n");
@@ -58,5 +71,6 @@ void display(node* head)
 int main()
 {
     create();
+    count();
     return 0;
 }
