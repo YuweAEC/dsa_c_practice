@@ -1,76 +1,73 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<conio.h>
+#include<stdio.h> // To use printf() and scanf() functions
+#include<stdlib.h> // To use malloc() function 
 
 
 // Define the node structure
-typedef struct node // Declaration of structure that defines list entries 
+typedef struct linkedListNode // Declaration of structure that defines list entries 
 {
-    int n;
-    struct node* next; // Pointer to the next node (list entry)
+    int n; // Data element of the node (list entry) 
+    struct linkedListNode* next; // Pointer to the next node (list entry)
 } node;
 
-void create()
+void create() // To create the list 
 {
-    int x;
-    char a;
-    node *t, *h, *head=NULL;
+    int x; // Declare a variable to store the value to be stored in the list
+    char a; // Declare a variable to store the choice of the user to continue or not
+    node *newNode, *lastNode; // Declare two pointers of type node to point to the first and last nodes of the list
     do
     {
         printf("Enter the value: ");
-        scanf("\n%d", &x);
-        t=(node*)malloc(sizeof(node));
-        t->n=x;
-        t->next=NULL;
+        scanf("\n%d", &x); // x is the value to be stored in the list
+        newNode=(node*)malloc(sizeof(node));
+        newNode->n=x; // Store the value in the node
+        newNode->next=NULL; // Make the next pointer of the new node as NULL
         if (head==NULL)
         {
-            head=t; 
-            h=t;
+            head=newNode; // Make the new node as the first node of the list
+            lastNode=newNode; // Make the new node as the last node of the list
         }
         else
         {
-            h->next=t;
-            h=t;
+            lastNode->next=newNode; // Link the new node to the last node of the list
+            lastNode=newNode; // Make the new node as the last node of the list
         }
         printf("Do you want to continue? (y/n): ");
-        getchar();
-        a=getchar();
-    } while (a=='y' || a=='Y');
-    display(head); // Call the display function to display the list elements 
+        a=getchar(); // To read the character entered by the user after the value is entered
+    } while (a=='y' || a=='Y'); 
 }
 
 int count()
 {
-    int c=0;
-    node* head=NULL;
-    while(head!=NULL)
-    {
-        c++;
-        head=head->next;
+    node* lastNode=head; // Declare a pointer of type node to point to the first node of the list 
+    int c=0; // Declare a variable to store the number of nodes in the list 
+    while(lastNode!=NULL) // Traverse the list till the last node is reached    
+    { 
+        c++; // Increment the value of c by 1 
+        lastNode=lastNode->next; // Make lastNode point to the next node of the list 
     }
-    return c;
+    return c; // Return the value of c 
 }
 
 void display()
 {
-    node *head;
-    if(head==NULL)
+    node *lastNode; // Declare a pointer of type node to point to the first node of the list
+    if(head==NULL) // Check if the list is empty 
     {
         printf("List is empty\n");
         return;
     }
     printf("The elements are: ");
-    while(head!=NULL)
+    lastNode=head; // Make the lastNode pointer point to the first node of the list 
+    while(lastNode!=NULL) // Traverse the list till the last node  is reached 
     {
-        printf("%5d", head->n);
-        head=head->next;
+        printf("%5d", lastNode->n); // Print the value of the node pointed to by lastNode 
+        lastNode=lastNode->next; // Make lastNode point to the next node of the list 
     }
-    printf("\n");
 }
 
 int main()
 {
-    create();
-    count();
-    return 0;
+    create(); // To create the list 
+    count(); // To count the number of nodes in the list
+    return 0; // Return 0 to operating system
 }
