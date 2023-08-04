@@ -9,6 +9,13 @@ typedef struct linkedListNode // Declaration of structure that defines list entr
     struct linkedListNode* next; // Pointer to the next node (list entry)
 } node;
 
+int main()
+{
+    create(); // To create the list 
+    count(); // To count the number of nodes in the list
+    return 0; // Return 0 to operating system
+}
+
 void create() // To create the list 
 {
     int x; // Declare a variable to store the value to be stored in the list
@@ -65,9 +72,25 @@ void display()
     }
 }
 
-int main()
+void deletebyPosition()
 {
-    create(); // To create the list 
-    count(); // To count the number of nodes in the list
-    return 0; // Return 0 to operating system
+    int i, c;
+    c=count();
+    node *lastNode, *temp;
+    if(p<1 || p>c)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+    if(p==1)
+    {
+        lastNode=head;
+        head=head->next;
+        free(lastNode);
+    }
+    else
+    {
+        lastNode=head;
+        temp=lastNode->next;
+    }
 }
