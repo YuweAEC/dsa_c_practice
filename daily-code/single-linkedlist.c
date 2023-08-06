@@ -94,3 +94,29 @@ void deletebyPosition()
         temp=lastNode->next;
     }
 }
+
+void reverse()
+{
+    node *lastNode, *prevNode, *nextNode;
+    if(head==NULL)
+    {
+        printf("List is empty\n");
+        return;
+    }
+    if(head->next==NULL)
+    {
+        return;
+    }
+    prevNode=NULL;
+    lastNode=head;
+    nextNode=head->next;
+    while(nextNode!=NULL)
+    {
+        lastNode->next=prevNode;
+        prevNode=lastNode;
+        lastNode=nextNode;
+        nextNode=nextNode->next;
+    }
+    lastNode->next=prevNode;
+    head=lastNode;
+}
