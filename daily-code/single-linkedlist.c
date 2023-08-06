@@ -120,3 +120,37 @@ void reverse()
     lastNode->next=prevNode;
     head=lastNode;
 }
+
+void addAfter()
+{
+    int x, p, c=0;
+    node *lastNode, *newNode;
+    printf("Enter the value: ");
+    scanf("%d", &x);
+    printf("Enter the position: ");
+    scanf("%d", &p);
+    c=count();
+    if(p<1 || p>c)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+    newNode=(node*)malloc(sizeof(node));
+    newNode->n=x;
+    newNode->next=NULL;
+    if(p==1)
+    {
+        newNode->next=head;
+        head=newNode;
+    }
+    else
+    {
+        lastNode=head;
+        for(i=1; i<p; i++)
+        {
+            lastNode=lastNode->next;
+        }
+        newNode->next=lastNode->next;
+        lastNode->next=newNode;
+    }
+}
