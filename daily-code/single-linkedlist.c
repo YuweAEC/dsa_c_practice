@@ -9,8 +9,20 @@ typedef struct linkedListNode // Declaration of structure that defines list entr
     struct linkedListNode* next; // Pointer to the next node (list entry)
 } node;
 
+void create(); // To create the list
+void display(); // To display the list
+void deletebyPosition(); // To delete a node from the list by position
+void reverse(); // To reverse the list
+void addAfter(); // To add a node after a given position
+void addBefore(); // To add a node before a given position
+int count(); // To count the number of nodes in the list
+    
 int main()
-{
+{   
+    deletebyPosition(); // To delete a node from the list by position
+    reverse(); // To reverse the list
+    addAfter(); // To add a node after a given position
+    addBefore(); // To add a node before a given position
     create(); // To create the list 
     count(); // To count the number of nodes in the list
     return 0; // Return 0 to operating system
