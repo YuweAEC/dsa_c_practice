@@ -16,6 +16,9 @@ void reverse(); // To reverse the list
 void addAfter(); // To add a node after a given position
 void addBefore(); // To add a node before a given position
 int count(); // To count the number of nodes in the list
+void delete(); // To delete a node from the list by value
+node *head=NULL; // Declare a pointer of type node to point to the first node of the list
+
     
 int main()
 {   
