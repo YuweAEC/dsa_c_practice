@@ -55,6 +55,39 @@ void create() // To create the list
     } while (a=='y' || a=='Y'); 
 }
 
+void delete()
+{
+    int x;
+    node *lastNode, *temp;
+    if(head==NULL)
+    {
+        printf("List is empty\n");
+        return;
+    }
+    printf("Enter the value: ");
+    scanf("%d", &x);
+    if(head->n==x)
+    {
+        lastNode=head;
+        head=head->next;
+        free(lastNode);
+        return;
+    }
+    temp=head;
+    while(temp->next!=NULL)
+    {
+        if(temp->next->n==x)
+        {
+            lastNode=temp->next;
+            temp->next=temp->next->next;
+            free(lastNode);
+            return;
+        }
+        temp=temp->next;
+    }
+    printf("Element not found\n");
+}
+
 int count()
 {
     node* lastNode=head; // Declare a pointer of type node to point to the first node of the list 
@@ -62,7 +95,7 @@ int count()
     while(lastNode!=NULL) // Traverse the list till the last node is reached    
     { 
         c++; // Increment the value of c by 1 
-        lastNode=lastNode->next; // Make lastNode point to the next node of the list 
+        lastNode=lastNode->next; // Make lastNode point to the next noede of the list 
     }
     return c; // Return the value of c 
 }
