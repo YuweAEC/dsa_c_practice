@@ -267,3 +267,23 @@ void deletePosition()
 }
 
 
+node *search(int x) // Function to search for a node with a given value 
+{
+    node *lastNode;
+    if(head==NULL) // Check if the list is empty
+    {
+        printf("List is empty\n");
+        return NULL;
+    }
+    lastNode=head;
+    while(lastNode!=NULL)
+    {
+        if(lastNode->n==x)
+        {
+            return lastNode;
+        }
+        lastNode=lastNode->next; // Make lastNode point to the next node of the list
+    }
+    return NULL;
+}
+
