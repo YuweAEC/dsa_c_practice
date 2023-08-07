@@ -19,12 +19,12 @@ int count(); // To count the number of nodes in the list
     
 int main()
 {   
+    create(); // To create the list 
+    count(); // To count the number of nodes in the list
     deletebyPosition(); // To delete a node from the list by position
     reverse(); // To reverse the list
     addAfter(); // To add a node after a given position
     addBefore(); // To add a node before a given position
-    create(); // To create the list 
-    count(); // To count the number of nodes in the list
     return 0; // Return 0 to operating system
 }
 
@@ -201,3 +201,36 @@ void addBefore()
         temp->next=newNode;
     }
 }
+
+void deletePosition()
+{
+    int p, c=0;
+    node *lastNode, *temp;
+    printf("Enter the position: ");
+    scanf("%d", &p);
+    c=count();
+    if(p<1 || p>c)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+    if(p==1)
+    {
+        lastNode=head;
+        head=head->next;
+        free(lastNode);
+    }
+    else
+    {
+        lastNode=head;
+        for(i=1; i<p; i++)
+        {
+            temp=lastNode;
+            lastNode=lastNode->next;
+        }
+        temp->next=lastNode->next;
+        free(lastNode);
+    }
+}
+
+
