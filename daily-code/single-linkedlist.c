@@ -28,6 +28,8 @@ int main()
     reverse(); // To reverse the list
     addAfter(); // To add a node after a given position
     addBefore(); // To add a node before a given position
+    delete(); // To delete a node from the list by value
+    display(); // To display the list
     return 0; // Return 0 to operating system
 }
 
