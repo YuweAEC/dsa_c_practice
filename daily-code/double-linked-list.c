@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
+#include<stdlib.h> // for malloc function 
+
 
 /* create double linked list add function*/
 
@@ -7,19 +9,19 @@ void add();
 void display();
 void delete();
 
-struct node
+struct node // structure declaration 
 {
     int data;
     struct node *next;
     struct node *prev;
 };
 
-struct node *start = NULL;
+struct node *start = NULL; // global variable declaration 
 
-int main()
+int main() // main function 
 {
     int choice;
-    while(1)
+    while(1) // infinite loop 
     {
         printf("\n1. Add");
         printf("\n2. Display");
@@ -27,7 +29,7 @@ int main()
         printf("\n4. Exit");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
-        switch(choice)
+        switch(choice) // menu driven switch case 
         {
             case 1:
                 add();
@@ -47,12 +49,12 @@ int main()
     return 0;
 }
 
-void add()
+void add() // add function 
 {
-    struct node *temp, *p;
-    temp = (struct node *)malloc(sizeof(struct node));
+    struct node *temp, *p; // local variable declaration
+    temp = (struct node *)malloc(sizeof(struct node)); // dynamic memory allocation 
     printf("\nEnter data: ");
-    scanf("%d", &temp->data);
+    scanf("%d", &temp->data); // read data 
     temp->next = NULL;
     temp->prev = NULL;
     if(start == NULL)
@@ -62,9 +64,9 @@ void add()
     else
     {
         p = start;
-        while(p->next != NULL)
+        while(p->next != NULL) // traverse till last node 
         {
-            p = p->next;
+            p = p->next; // move to next node 
         }
         p->next = temp;
         temp->prev = p;
@@ -72,15 +74,15 @@ void add()
 }
 
 void display()
-{
-    struct node *p;
-    if(start == NULL)
+{ 
+    struct node *p; // local variable declaration 
+    if(start == NULL) // check list is empty or not 
     {
         printf("\nList is empty");
     }
     else
     {
-        p = start;
+        p = start; // assign start address to p 
         while(p != NULL)
         {
             printf("\n%d", p->data);
@@ -91,7 +93,7 @@ void display()
 
 void delete()
 {
-    struct node *p;
+    struct node *p; // local variable declaration
     int num;
     printf("\nEnter data to delete: ");
     scanf("%d", &num);
@@ -99,23 +101,23 @@ void delete()
     {
         printf("\nList is empty");
     }
-    else if(start->data == num)
+    else if(start->data == num) // check data is found or not 
     {
-        p = start;
-        start = start->next;
-        start->prev = NULL;
-        free(p);
+        p = start; // assign start address to p
+        start = start->next; // link next node 
+        start->prev = NULL; // link previous node 
+        free(p); // free memory 
     }
     else
     {
         p = start;
         while(p->next != NULL)
         {
-            if(p->next->data == num)
+            if(p->next->data == num) // check data is found or not
             {
                 break;
             }
-            p = p->next;
+            p = p->next; // move to next node
         }
         if(p->next == NULL)
         {
@@ -123,11 +125,11 @@ void delete()
         }
         else
         {
-            struct node *temp;
-            temp = p->next;
-            p->next = temp->next;
-            temp->next->prev = p;
-            free(temp);
+            struct node *temp; // local variable declaration
+            temp = p->next;  // assign next node address to temp 
+            p->next = temp->next; // link next node 
+            temp->next->prev = p; // link previous node 
+            free(temp); // free memory 
         }
     }
 } // end of delete function 
