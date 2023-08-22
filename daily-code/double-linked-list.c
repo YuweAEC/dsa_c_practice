@@ -71,3 +71,20 @@ void add()
     }
 }
 
+void display()
+{
+    struct node *p;
+    if(start == NULL)
+    {
+        printf("\nList is empty");
+    }
+    else
+    {
+        p = start;
+        while(p != NULL)
+        {
+            printf("\n%d", p->data);
+            p = p->next;
+        }
+    }
+}
