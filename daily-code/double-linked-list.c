@@ -231,7 +231,7 @@ void addAfter()
     }
 }
 
-void count()
+void count() // to count total number of nodes
 {
     struct node *p; // local variable declaration
     int c = 0;
@@ -248,5 +248,28 @@ void count()
             p = p->next;
         }
         printf("\nTotal nodes: %d", c);
+    }
+}
+
+void deletebyPosition() // to delete node by position
+{
+    int i, c;
+    c=count();
+    struct node *lastNode, *temp; // local variable declaration
+    if(p<1 || p>c)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+    if(p==1)
+    {
+        lastNode=start;
+        start=start->next;
+        free(lastNode);
+    }
+    else
+    {
+        lastNode=start;
+        temp=lastNode->next;
     }
 }
