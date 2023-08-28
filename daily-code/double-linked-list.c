@@ -10,6 +10,9 @@ void display();
 void delete();
 void addBefore();
 void addAfter();
+void count();
+void deletebyPosition();
+void reverse();
 
 struct node // structure declaration 
 {
@@ -225,5 +228,25 @@ void addAfter()
             }
             p->next = temp; // link next node 
         }
+    }
+}
+
+void count()
+{
+    struct node *p; // local variable declaration
+    int c = 0;
+    if(start == NULL)
+    {
+        printf("\nList is empty");
+    }
+    else
+    {
+        p = start;
+        while(p != NULL)
+        {
+            c++;
+            p = p->next;
+        }
+        printf("\nTotal nodes: %d", c);
     }
 }
