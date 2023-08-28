@@ -25,13 +25,13 @@ struct node *start = NULL; // global variable declaration
 
 int main()
 {
-    int choice;
+    int ch;
     while(1) // infinite loop 
     {
-        printf("\n1.Add\n2.Display\n3.Delete\n4.Add Before\n5.Add After\n6.Exit\n");
+        printf("\n1.Add\n2.Display\n3.Delete\n4.Add Before\n5.Add After\n6.Count\n7.Delete by position\n8.Reverse\n9.Exit\n");
         printf("\nEnter your choice: ");
-        scanf("%d", &choice);
-        switch(choice)
+        scanf("%d", &ch);
+        switch(ch)
         {
             case 1:
                 add(); // invoke add function 
@@ -49,6 +49,15 @@ int main()
                 addAfter(); // invoke addAfter function 
                 break;
             case 6:
+                count(); // invoke count function 
+                break;
+            case 7:
+                deletebyPosition(); // invoke deletebyPosition function 
+                break;
+            case 8:
+                reverse(); // invoke reverse function 
+                break;
+            case 9:
                 exit(0); // exit from the program 
             default:
                 printf("\nInvalid choice");
