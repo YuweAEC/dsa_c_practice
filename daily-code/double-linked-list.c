@@ -273,3 +273,30 @@ void deletebyPosition() // to delete node by position
         temp=lastNode->next;
     }
 }
+
+void reverse() // to reverse the list 
+{
+    struct node *lastNode, *prevNode, *nextNode; // local variable declaration
+    if(start==NULL)
+    {
+        printf("List is empty\n");
+        return;
+    }
+    if(start->next==NULL)
+    {
+        return;
+    }
+    prevNode=NULL;
+    lastNode=start;
+    nextNode=start->next;
+    while(nextNode!=NULL)
+    {
+        lastNode->next=prevNode;
+        prevNode=lastNode;
+        lastNode=nextNode;
+        nextNode=nextNode->next;
+    }
+    lastNode->next=prevNode;
+    start=lastNode;
+}
+
