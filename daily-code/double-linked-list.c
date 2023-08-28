@@ -8,6 +8,8 @@
 void add();
 void display();
 void delete();
+void addBefore();
+void addAfter();
 
 struct node // structure declaration 
 {
@@ -18,30 +20,33 @@ struct node // structure declaration
 
 struct node *start = NULL; // global variable declaration 
 
-int main() // main function 
+int main()
 {
     int choice;
     while(1) // infinite loop 
     {
-        printf("\n1. Add");
-        printf("\n2. Display");
-        printf("\n3. Delete");
-        printf("\n4. Exit");
+        printf("\n1.Add\n2.Display\n3.Delete\n4.Add Before\n5.Add After\n6.Exit\n");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
-        switch(choice) // menu driven switch case 
+        switch(choice)
         {
             case 1:
-                add();
+                add(); // invoke add function 
                 break;
             case 2:
-                display();
+                display(); // invoke display function 
                 break;
             case 3:
-                delete();
+                delete(); // invoke delete function 
                 break;
             case 4:
-                exit(0);
+                addBefore(); // invoke addBefore function 
+                break;
+            case 5:
+                addAfter(); // invoke addAfter function 
+                break;
+            case 6:
+                exit(0); // exit from the program 
             default:
                 printf("\nInvalid choice");
         }
@@ -134,3 +139,91 @@ void delete()
     }
 } // end of delete function 
 
+void addBefore()
+{
+    struct node *temp, *p; // local variable declaration
+    int num;
+    temp = (struct node *)malloc(sizeof(struct node)); // dynamic memory allocation 
+    printf("\nEnter data: ");
+    scanf("%d", &temp->data); // read data 
+    temp->next = NULL;
+    temp->prev = NULL;
+    printf("\nEnter data before which node to insert: ");
+    scanf("%d", &num);
+    if(start == NULL)
+    {
+        printf("\nList is empty");
+    }
+    else if(start->data == num) // check data is found or not 
+    {
+        temp->next = start; // link next node 
+        start->prev = temp; // link previous node 
+        start = temp;
+    }
+    else
+    {
+        p = start;
+        while(p->next != NULL)
+        {
+            if(p->next->data == num) // check data is found or not 
+            {
+                break;
+            }
+            p = p->next; // move to next node 
+        }
+        if(p->next == NULL)
+        {
+            printf("\n%d not found", num);
+        }
+        else
+        {
+            temp->next = p->next; // link next node 
+            temp->prev = p; // link previous node 
+            p->next->prev = temp; // link previous node 
+            p->next = temp; // link next node 
+        }
+    }
+} // end of addBefore function
+
+void addAfter()
+{
+    struct node *temp, *p; // local variable declaration
+    int num;
+    temp = (struct node *)malloc(sizeof(struct node)); // dynamic memory allocation 
+    printf("\nEnter data: ");
+    scanf("%d", &temp->data); // read data 
+    temp->next = NULL;
+    temp->prev = NULL;
+    printf("\nEnter data after which node to insert: ");
+    scanf("%d", &num);
+    if(start == NULL)
+    {
+        printf("\nList is empty");
+    }
+    else
+    {
+        p = start;
+        while(p != NULL)
+        {
+            if(p->data == num) // check data is found or not 
+            {
+                break;
+            }
+            p = p->next; // move to next node 
+        }
+        if(p == NULL)
+        {
+            printf("\n%d not found", num);
+        }
+        else
+        {
+            temp->next = p->next; // link next node 
+            temp->prev = p; // link previous node 
+            if(p->next != NULL)
+            {
+                p->next->prev = temp; // link previous node 
+            }
+            p->next = temp; // link next node 
+        }
+    }
+}
