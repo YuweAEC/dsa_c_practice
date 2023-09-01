@@ -17,6 +17,7 @@ Every language has its own *data structures* and its way of handling different t
 Follow the following wa to connect through repo :- 
 >List of files and folders -
 >>>stack
+>> **Daily-code-status**
 >> 1. *stack.txt*
 >> 2. *push-pop.c*
 >> 3. *STACKARR.c*
