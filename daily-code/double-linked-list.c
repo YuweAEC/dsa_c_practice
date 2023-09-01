@@ -12,14 +12,14 @@ void addBefore();
 void addAfter();
 void count();
 void deletebyPosition();
-void reverse();
+void reverse();\
 
 struct node // structure declaration 
 {
     int data;
     struct node *next;
     struct node *prev;
-};
+};          
 
 struct node *start = NULL; // global variable declaration 
 
@@ -240,7 +240,7 @@ void addAfter()
     }
 }
 
-void count() // to count total number of nodes
+int count() // to count total number of nodes
 {
     struct node *p; // local variable declaration
     int c = 0;
@@ -267,7 +267,7 @@ void deletebyPosition() // to delete node by position
     struct node *lastNode, *temp; // local variable declaration
     if(p<1 || p>c)
     {
-        printf("Invalid position\n");
+        printf("Invali  d position\n");
         return;
     }
     if(p==1)
