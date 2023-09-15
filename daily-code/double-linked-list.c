@@ -10,7 +10,7 @@ void display();
 void delete();
 void addBefore();
 void addAfter();
-void count();
+int count();
 void deletebyPosition();
 void reverse();\
 
@@ -262,7 +262,7 @@ int count() // to count total number of nodes
 
 void deletebyPosition() // to delete node by position
 {
-    int i, c;
+    int i, c , p; // local variable declaration
     c=count();
     struct node *lastNode, *temp; // local variable declaration
     if(p<1 || p>c)
