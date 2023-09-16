@@ -24,6 +24,10 @@ void createLindedList()
             h = t;
         }
         printf("Do you want to insert more elements(y/n):");
+    }
+    while (a == 'y');
+}
+
 void display()
 {
     node *h;
