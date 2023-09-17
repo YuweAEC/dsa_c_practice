@@ -124,7 +124,7 @@ void display()
 
 void deletebyPosition()
 {
-    int i, c;
+    int i, c , p;
     c=count();
     node *lastNode, *temp;
     if(p<1 || p>c)
@@ -173,7 +173,7 @@ void reverse()
 
 void addAfter()
 {
-    int x, p, c=0;
+    int x, p, c=0, i;
     node *lastNode, *newNode;
     printf("Enter the value: ");
     scanf("%d", &x);
@@ -207,7 +207,7 @@ void addAfter()
 
 void addBefore()
 {
-    int x, p, c=0;
+    int x, p, c=0, i;
     node *lastNode, *newNode, *temp;
     printf("Enter the value: ");
     scanf("%d", &x);
@@ -242,7 +242,7 @@ void addBefore()
 
 void deletePosition()
 {
-    int p, c=0;
+    int p, c=0, i;
     node *lastNode, *temp;
     printf("Enter the position: ");
     scanf("%d", &p);
@@ -294,7 +294,7 @@ node *search(int x) // Function to search for a node with a given value
 
 void addByPosition()
 {
-    int x, p, c=0;
+    int x, p, c=0, i;
     node *lastNode, *newNode;
     printf("Enter the value: ");
     scanf("%d", &x);
