@@ -24,3 +24,22 @@ void add(int x)
         r++;
     a[r]=x;
 }
+
+void deletion()
+{
+    int r, f , a[MAX];
+    if(f==-1)
+    {
+        printf("Q is EMpty, Can't delete");
+        return ;
+    }
+    
+    printf("the deleted element is %d", a[f]);
+    
+    if(f==r)
+        f=f=-1;
+    
+    else
+        f++;
+}
+
