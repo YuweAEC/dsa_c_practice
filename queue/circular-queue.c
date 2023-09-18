@@ -43,3 +43,16 @@ void deletion()
         f++;
 }
 
+void display()
+{
+    int r, f , a[MAX];
+    if(f==-1)
+    {
+        printf("Q is EMpty, Can't delete");
+        return ;
+    }
+    
+    for(int i=f; i<=r; i++)
+        printf("%d", a[i]);
+}
+
