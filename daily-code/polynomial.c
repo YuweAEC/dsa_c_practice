@@ -39,3 +39,16 @@ void create(struct node **head)
     }
 }
 
+void display(struct node *head)
+{
+    struct node *temp;
+    temp = head;
+    while (temp != NULL)
+    {
+        printf("%dx^%d", temp->coeff, temp->exp);
+        temp = temp->next;
+        if (temp != NULL)
+            printf(" + ");
+    }
+}
+
