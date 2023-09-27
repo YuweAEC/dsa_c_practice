@@ -56,3 +56,41 @@ void add()
         temp->prev = p;
     }
 }
+
+void deleteNode() 
+{
+    struct node* p;
+    int num;
+    printf("\nEnter data to delete: ");
+    scanf("%d", &num);
+    if (start == NULL) {
+        printf("\nList is empty");
+    }
+    else if (start->data == num) {
+        p = start;
+        start = start->next;
+        start->prev = NULL;
+        free(p);
+    }
+    else {
+        p = start;
+        while (p->next != NULL) {
+            if (p->next->data == num) {
+                break;
+            }
+            p = p->next;
+        }
+        if (p->next == NULL) {
+            printf("\n%d not found", num);
+        }
+        else {
+            struct node* temp;
+            temp = p->next;
+            p->next = temp->next;
+            if (temp->next != NULL) {
+                temp->next->prev = p;
+            }
+            free(temp);
+        }
+    }
+}
