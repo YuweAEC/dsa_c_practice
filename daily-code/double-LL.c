@@ -16,11 +16,13 @@ void deleteNode();
 int main() 
 {
     int ch;
-    while (1) {
+    while (1) 
+    {
         printf("\n1. Add\n2. Delete\n3. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
-        switch (ch) {
+        switch (ch) 
+        {
             case 1:
                 add();
                 break;
@@ -44,12 +46,15 @@ void add()
     scanf("%d", &temp->data);
     temp->next = NULL;
     temp->prev = NULL;
-    if (start == NULL) {
+    if (start == NULL) 
+    {
         start = temp;
     }
-    else {
+    else 
+    {
         p = start;
-        while (p->next != NULL) {
+        while (p->next != NULL) 
+        {
             p = p->next;
         }
         p->next = temp;
@@ -63,34 +68,43 @@ void deleteNode()
     int num;
     printf("\nEnter data to delete: ");
     scanf("%d", &num);
-    if (start == NULL) {
+    if (start == NULL) 
+    {
         printf("\nList is empty");
     }
-    else if (start->data == num) {
+    else if (start->data == num) 
+    {
         p = start;
         start = start->next;
         start->prev = NULL;
         free(p);
     }
-    else {
+    else 
+    {
         p = start;
-        while (p->next != NULL) {
-            if (p->next->data == num) {
+        while (p->next != NULL) 
+        {
+            if (p->next->data == num) 
+            {
                 break;
             }
             p = p->next;
         }
-        if (p->next == NULL) {
+        if (p->next == NULL) 
+        {
             printf("\n%d not found", num);
         }
-        else {
+        else 
+        {
             struct node* temp;
             temp = p->next;
             p->next = temp->next;
-            if (temp->next != NULL) {
+            if (temp->next != NULL) 
+            {
                 temp->next->prev = p;
             }
             free(temp);
         }
     }
 }
+
