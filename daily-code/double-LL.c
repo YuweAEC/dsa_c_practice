@@ -21,6 +21,7 @@ int main()
         printf("\n1. Add\n2. Delete\n3. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
+
         switch (ch) 
         {
             case 1:
@@ -46,6 +47,7 @@ void add()
     scanf("%d", &temp->data);
     temp->next = NULL;
     temp->prev = NULL;
+
     if (start == NULL) 
     {
         start = temp;
@@ -68,6 +70,7 @@ void deleteNode()
     int num;
     printf("\nEnter data to delete: ");
     scanf("%d", &num);
+    
     if (start == NULL) 
     {
         printf("\nList is empty");
