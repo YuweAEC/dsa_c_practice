@@ -14,6 +14,22 @@ struct node *head1 = NULL; // Global pointers to the heads of the two polynomial
 struct node *head2 = NULL; 
 struct node *head3 = NULL;
 
+
+int main() // Main function 
+{
+    printf("Enter the first polynomial:\n");
+    create(&head1);
+    printf("Enter the second polynomial:\n");
+    create(&head2);
+    printf("The first polynomial is: ");
+    display(head1);
+    printf("\nThe second polynomial is: ");
+    display(head2);
+    sumofPolynomials(head1, head2, &head3);
+    printf("\nThe sum of the two polynomials is: ");
+    display(head3);
+    return 0; // End of main function 
+}
 void create(struct node **head)  // Function to create a polynomial 
 {
     struct node *newnode, *temp;
@@ -111,20 +127,4 @@ void sumofPolynomials(struct node *head1, struct node *head2, struct node **head
         temp3->exp = temp2->exp;
         temp2 = temp2->next;
     }
-}
-
-int main() // Main function 
-{
-    printf("Enter the first polynomial:\n");
-    create(&head1);
-    printf("Enter the second polynomial:\n");
-    create(&head2);
-    printf("The first polynomial is: ");
-    display(head1);
-    printf("\nThe second polynomial is: ");
-    display(head2);
-    sumofPolynomials(head1, head2, &head3);
-    printf("\nThe sum of the two polynomials is: ");
-    display(head3);
-    return 0; // End of main function 
 }
