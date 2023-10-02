@@ -3,12 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function prototypes
-void create(struct node **head);
-void display(struct node *head);
-void sumOfPolynomials(struct node *head1, struct node *head2, struct node **head3);
-
-
 struct node  // Structure of a node in a linked list 
 {
     int coeff;
