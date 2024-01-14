@@ -1,39 +1,36 @@
-# DSA using C :- Starting
+# DSA using C: Starting
 
- - Title
- - Introduction
- - Authors
- - Acknowledgements
+## Table of Contents
+
+- [Title](#title)
+- [Introduction](#introduction)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
 ## Title
- 
-All DSA(Data Structure and ALgorithms) Practice sets on mine learning.
+
+**All DSA (Data Structure and Algorithms) Practice Sets in My Learning Journey.**
 
 ## Introduction
 
-**Data structures and algorithms (DSA)** are an important aspect of any *programming language*. 
-Every language has its own *data structures* and its way of handling different types of *algorithms*.
+Data structures and algorithms (DSA) form a crucial part of any programming language. Each language has its unique way of handling various data structures and algorithms.
 
-Follow the following wa to connect through repo :- 
->List of files and folders -
->>>stack
->> **Daily-code-status**
->> 1. *stack.txt*
->> 2. *push-pop.c*
->> 3. *STACKARR.c*
->>>polish notation
->> 1. *polish.c*
->>>queue
->> 1. *queue.txt*
->>>
+Explore the repository using the following structure:
+
+- `stack`
+  - **Daily Code Status**
+    - `stack.txt`
+    - `push-pop.c`
+    - `STACKARR.c`
+- `polish notation`
+  - `polish.c`
+- `queue`
+  - `queue.txt`
 
 ## Authors
 
- - **Yuvraj Singh**
+- **Yuvraj Singh**
 
 ## Acknowledgements
 
- - **Gaurav Singh**
-
-
-
+- **Gaurav Singh**
